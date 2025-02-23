@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" rel="stylesheet">
+    <script crossorigin="anonymous"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/3ff003e4f2.js"></script>
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+
+                <form id="calculatorForm" onsubmit="return false;">
+                    <div class="card-header">
+                        <h4>Веб калькулятор для розрахунку складу сухої та горючої маси палива та
+                            нижчої теплоти згоряння для робочої, сухої та горючої маси за заданим складом компонентів
+                            палива, що задаються у вигляді значень окремих компонентів</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <!-- 1-->
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 ">
+                                <div class="mb-3">
+                                    <label class="form-label" for="percentH">H<sup>P</sup></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">%</span>
+                                        <input aria-describedby="helpH" class="form-control" id="percentH" max="100" min="0"
+                                               step="0.01" type="number" required>
+                                    </div>
+
+                                    <div class="form-text" id="helpH">H-водень</div>
+                                </div>
+                            </div>
+                            <!-- 2-->
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="mb-3">
+                                    <label class="form-label" for="percentC">C<sup>P</sup></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">%</span>
+                                        <input aria-describedby="helpC" class="form-control" id="percentC" max="100" min="0"
+                                               step="0.01" type="number" required>
+                                    </div>
+
+                                    <div class="form-text" id="helpC">С-вуглець</div>
+                                </div>
+                            </div>
+                            <!-- 3-->
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="mb-3">
+                                    <label class="form-label" for="percentS">S<sup>P</sup></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">%</span>
+                                        <input aria-describedby="helpS" class="form-control" id="percentS" max="100" min="0"
+                                               step="0.01" type="number" required>
+                                    </div>
+
+                                    <div class="form-text" id="helpS">S-сірка</div>
+                                </div>
+                            </div>
+                            <!-- 4-->
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="mb-3">
+                                    <label class="form-label" for="percentN">N<sup>P</sup></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">%</span>
+                                        <input aria-describedby="helpN" class="form-control" id="percentN" max="100" min="0"
+                                               step="0.01" type="number" required>
+                                    </div>
+
+                                    <div class="form-text" id="helpN">N-азот</div>
+                                </div>
+                            </div>
+                            <!-- 5-->
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="mb-3">
+                                    <label class="form-label" for="percentO">O<sup>P</sup></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">%</span>
+                                        <input aria-describedby="helpO" class="form-control" id="percentO" max="100" min="0"
+                                               step="0.01" type="number" required>
+                                    </div>
+
+                                    <div class="form-text" id="helpO">O-кисень</div>
+                                </div>
+                            </div>
+                            <!-- 6-->
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="mb-3">
+                                    <label class="form-label" for="percentW">W<sup>P</sup></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">%</span>
+                                        <input aria-describedby="helpW" class="form-control" id="percentW" max="100" min="0"
+                                               step="0.01" type="number" required>
+                                    </div>
+
+                                    <div class="form-text" id="helpW">W-волога</div>
+                                </div>
+                            </div>
+                            <!-- 7-->
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="mb-3">
+                                    <label class="form-label" for="percentA">A<sup>P</sup></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">%</span>
+                                        <input aria-describedby="helpA" class="form-control" id="percentA" max="100" min="0"
+                                               step="0.01" type="number" required>
+                                    </div>
+
+                                    <div class="form-text" id="helpA">А-зола</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn  btn-outline-success" type="submit">Submit</button>
+                    </div>
+
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12" id="result">
+
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="index.js"></script>
+</html>
